@@ -1,0 +1,327 @@
+@import 'nullstyle.scss';
+@import 'media.scss';
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&family=Jost:wght@400;600&family=Lato:wght@400;700&family=Montserrat:wght@300;400;500;700&family=Open+Sans:wght@400;500;600;700&family=Raleway:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&family=VT323&family=Varela+Round&display=swap');
+
+body{
+    width: 100%;
+    background: rgba(175, 126, 187, 0.4);
+    font-family: 'Montserrat', sans-serif;
+    transition: background 2s ease;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 660px;
+    padding: 0 15px 50px 15px;
+}
+
+
+// ********************
+// HEADER
+// ********************
+
+.header {
+    max-width: 100%;
+    font-size: 22px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 50px 0;
+    border-bottom: 3px solid #fff;
+    border-radius: 6px;
+}
+.header__logo {
+    display: flex;
+    gap: 15px;
+}
+.header__title {
+    font-weight: 600;
+}
+.header__icon{
+    
+}
+.nav {
+}
+.nav-group {
+    height: 100%;
+    border: 1px solid #000;
+    padding: 5px 10px;
+    background: rgba(255, 245, 245, 0.5);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    &:hover{
+        background: rgba(255, 245, 245, 0.7);
+    }
+}
+.nav__button {
+    height: 100%;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+}
+.button-settings-open{
+    cursor: pointer;
+}
+
+// ********************
+// TIMER
+// *******************
+
+.timer {
+    max-width: 480px;
+    margin: 0 auto;
+    background: rgba(175, 126, 187, 0.6);
+    border-radius: 15px;
+    padding: 0 60px; 
+
+    transition: background .5s ease;
+}
+.timer-mods {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 14px;
+}
+.timer-mods__button{
+    background: transparent;
+    padding: 7px;
+    border-radius: 5px;
+    font-weight: 500;
+
+    &:focus,
+    &:hover{
+        background: rgba(175, 126, 187, 0.8);
+    }
+}
+
+.focus{
+    background: rgba(175, 126, 187, 0.8);
+    font-weight: 700;
+}
+
+.timer__time {
+    max-width: 100%;
+    font-size: 100px;
+    font-weight: 500;
+    text-align: center;
+}
+.timer-controls {
+    padding: 30px 0;
+    text-align: center;
+}
+.timer-controls__stop {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 1em 7em;
+    border-radius: 10px;
+}
+
+
+// *********************
+// SETTINGS MODAL WINDOW
+// *********************
+
+
+.settings{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: -100%;
+    // top: 0;
+    left: 0;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.3);
+    transition: top .5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-modal{
+    top: 0;
+}
+
+.settings__modal{
+    position: relative;
+    max-width: 750px;
+    background: #fff;
+    padding: 10px 15px 40px 15px;
+    border-radius: 15px;
+}
+
+.settings__title {
+    font-size: 24px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.3);
+    padding: 10px 15px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    margin: 0 0 25px 0;
+}
+.settings-time__title {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 25px 0;
+    padding: 0 15px;
+}
+// 
+// TIME SETTINGS MODAL
+// 
+
+.settings-item{
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    padding: 0 0 20px 0;
+    margin: 0 0 20px 0;
+}
+
+.settings-time {
+    display: flex;  
+    justify-content: space-between;
+}
+.settings__group {
+    flex: 0 1 32%;
+    font-size: 16px;
+    text-align: center;
+}
+.settings-group__title {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+    margin: 0 0 5px 0;
+}
+.settings-group__input {
+    width: 60%;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.close-modal{
+    position: absolute;
+    font-size: 25px;
+    top: 10px;
+    right: 25px;
+    background: transparent;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+// 
+// AUTO START MODAL
+// 
+
+
+.settings-autoplay {
+    max-width: 100%;
+}
+.settings-autoplay__group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 0 50px 20px 20px;
+}
+.settings-autoplay__name {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.settings-autoplay__switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.settings-autoplay__checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+
+    &:checked + .settings-autoplay__slider{
+        background: #2196F3;
+    }
+    &:checked + .settings-autoplay__slider::before{
+        -webkit-transform: translateX(39px);
+        -ms-transform: translateX(39px);
+        transform: translateX(39px);
+    }
+}
+.settings-autoplay__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+
+
+    &::before{
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        height: 32px;
+        width: 32px;
+        left: 4px;
+        bottom: 4px;
+        background: #fff;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+}
+
+// 
+// AUDIO HANDLING MODAL
+// 
+
+.settings-audio {
+}
+.settings-item {
+}
+.settings-time__title {
+}
+.settings-audio__controls {
+    display: flex;
+    justify-content: space-between;
+}
+.settings-audio__range {
+    appearance: none;
+    width: 50%; 
+    height: 25px; 
+    background: #d3d3d3; 
+    opacity: 0.7;
+    transition: opacity .2s;
+    border-radius: 15px;
+    &::-webkit-slider-thumb{
+        appearance: none;
+        width: 20px; 
+        height: 20px; 
+        background: #000; 
+        border-radius: 50%;
+        cursor: pointer; 
+    }
+}
+.settings-audio__select {
+    flex: 0 0 34%;
+    text-align: center;
+    appearance: none;
+    font-size: 15px;
+    border: none;
+    outline: none;
+}
+
+@media screen and (max-width: 530px) {
+    .timer{
+        padding: 0 20px;
+    }
+    .timer__time{
+        font-size: 80px;
+    }
+}

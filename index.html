@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Pomodoro</title>
+</head>
+<body class="body">
+    <div class="container">
+        <header class="header">
+            <div class="header__logo">
+                <i class="fa-solid fa-pizza-slice header__icon"></i>
+                <h1 class="header__title">Pomadoro</h1>
+            </div>
+            <nav class="nav">
+                <div class="nav-group  button-settings-open">
+                    <i class="fa-solid fa-gear"></i>
+                    <button class="nav__button">Settings</button>
+                </div>
+            </nav>
+        </header>
+
+        <div class="timer">
+            <div class="timer-mods">
+                <button class="timer-mods__button btn pomodoro-mode focus" value="0">Pomodoro</button>
+                <button class="timer-mods__button btn short-break-mode" value="1">Short Break</button>
+                <button class="timer-mods__button btn long-break-mode" value="2">Long Break</button>
+            </div>
+            <div class="timer__container">
+                <p class="timer__time"></p>
+            </div>
+            <div class="timer-controls">
+                <button class="timer-controls__stop timer-start-button">START</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="settings">
+        <div class="settings__modal">
+            <button class="close-modal button-settings-close"><i class="fa-solid fa-xmark"></i></button>
+            <h2 class="settings__title">TIMER SETTINGS</h2>
+            <h3 class="settings-time__title">Time (minutes)</h3>
+            <div class="settings-time settings-item">
+                <div class="settings__group">
+                    <p class="settings-group__title">Pomodoro</p>
+                    <input class="settings-group__input time-input" type="number" name="pomodoro" value="25" min="0">
+                </div>
+                <div class="settings__group">
+                    <p class="settings-group__title">Short brake</p>
+                    <input class="settings-group__input time-input" type="number" name="short-brake" value="12" min="0">
+                </div>
+                <div class="settings__group">
+                    <p class="settings-group__title">Long brake</p>
+                    <input class="settings-group__input time-input" type="number" name="long-brake" value="15" min="0">
+                </div>
+            </div>
+            <div class="settings-autoplay">
+                <div class="settings-autoplay__group settings-item">
+                    <p class="settings-autoplay__name">Auto start Break?</p>  
+                    <label class="settings-autoplay__switch">
+                        <input class="settings-autoplay__checkbox auto-start-break" type="checkbox">
+                        <span class="settings-autoplay__slider"></span>
+                    </label>
+                </div>
+                <div class="settings-autoplay__group settings-item">
+                    <p class="settings-autoplay__name">Auto start Pomodoro?</p>  
+                    <label class="settings-autoplay__switch">
+                        <input class="settings-autoplay__checkbox auto-start-pomodoro" type="checkbox">
+                        <span class="settings-autoplay__slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="settings-audio settings-item">
+                <h3 class="settings-time__title">Audio</h3>
+                <div class="settings-audio__controls">
+                    <input class="settings-audio__range" type="range" min="0" max="100" value="40">
+                    <select class="settings-audio__select">
+                        <option class="audio-options" value="./audio/PlayboiCarti-Sky.mp3" selected>Playboi Carti - Sky</option>
+                        <option class="audio-options" value="./audio/PlayboiCarti-RIP.mp3">Playboi Carti - R.I.P.</option>
+                    </select> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio class="audio-player" src="./" muted></audio>
+
+    <script src="https://kit.fontawesome.com/fefd07b714.js" crossorigin="anonymous"></script>
+    <script src="./js/popup.js"></script>
+    <script src="./js/timer.js"></script>
+    <script src="./js/time.js"></script>
+    <script src="./js/audio.js"></script>
+</body>
+</html>
